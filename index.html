@@ -57,9 +57,22 @@
             I’m an IT graduate with a sociology background. I care about technology and humanity - and sci-fi of course!
           </span>
                 </h1>
-                <button type="button" class="rounded-pill btn-rounded">Check My CV
+
+                <button type="button" class="rounded-pill btn-rounded" id="downloadButton">
+                    Check My CV
                     <span><i class="fas fa-arrow-right"></i></span>
                 </button>
+
+                <script>
+                    document.getElementById('downloadButton').addEventListener('click', function() {
+                        var link = document.createElement('a');
+                        link.href = 'file/CV_Shiyi_Huang.docx'; // Replace with the path to your file
+                        link.download = 'CV_Shiyi_Huang.docx'; // The name of the file to be downloaded
+                        link.click();
+                    });
+                </script>
+
+
             </div>
             <!-- START THE CONTENT FOR THE VIDEO -->
             <div class="col-md-6 intros text-end">
@@ -317,11 +330,6 @@
         <div class="row text-white">
             <div class="col-12 col-lg-6 gradient shadow p-3">
                 <div class="cta-info w-100">
-                    <!--                    <h4 class="display-4 fw-bold">100% Satisfaction Guaranteed</h4>-->
-                    <!--                    <p class="lh-lg">-->
-                    <!--                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias optio minima, tempore-->
-                    <!--                        architecto sint ipsam dolore tempora facere laboriosam corrupti!-->
-                    <!--                    </p>-->
                     <h3 class="display-3--brief">Why me?</h3>
                     <ul class="cta-info__list">
                         <li>A good employee</li>
@@ -330,27 +338,29 @@
                     </ul>
                 </div>
             </div>
+
+            <!--  try try email-->
             <div class="col-12 col-lg-6 bg-white shadow p-3">
                 <div class="form w-100 pb-2">
-                    <form action="#" class="row">
+                    <form action="https://formspree.io/f/xovavrjd" method="POST" class="row">
                         <div class="col-lg-6 col-md mb-3">
-                            <input type="text" placeholder="First Name" id="inputFirstName"
-                                   class="shadow form-control form-control-lg">
+                            <input type="text" name="first_name" placeholder="First Name" id="inputFirstName"
+                                   class="shadow form-control form-control-lg" required>
                         </div>
                         <div class="col-lg-6 col-md mb-3">
-                            <input type="text" placeholder="Last Name" id="inputLastName"
-                                   class="shadow form-control form-control-lg">
+                            <input type="text" name="last_name" placeholder="Last Name" id="inputLastName"
+                                   class="shadow form-control form-control-lg" required>
                         </div>
                         <div class="col-lg-12 mb-3">
-                            <input type="email" placeholder="email address" id="inputEmail"
-                                   class="shadow form-control form-control-lg">
+                            <input type="email" name="email" placeholder="Email Address" id="inputEmail"
+                                   class="shadow form-control form-control-lg" required>
                         </div>
                         <div class="col-lg-12 mb-3">
-                            <textarea name="message" placeholder="message" id="message" rows="4"
-                                      class="shadow form-control form-control-lg"></textarea>
+                            <textarea name="message" placeholder="Message" id="message" rows="4"
+                                      class="shadow form-control form-control-lg" required></textarea>
                         </div>
                         <div class="text-center d-grid mt-1">
-                            <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
+                            <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
                                 Send
                                 <i class="fas fa-paper-plane"></i>
                             </button>
@@ -358,6 +368,36 @@
                     </form>
                 </div>
             </div>
+
+            <!--            end try-->
+            <!--            <div class="col-12 col-lg-6 bg-white shadow p-3">-->
+            <!--                <div class="form w-100 pb-2">-->
+            <!--                    <form action="#" class="row">-->
+            <!--                        <div class="col-lg-6 col-md mb-3">-->
+            <!--                            <input type="text" placeholder="First Name" id="inputFirstName"-->
+            <!--                                   class="shadow form-control form-control-lg">-->
+            <!--                        </div>-->
+            <!--                        <div class="col-lg-6 col-md mb-3">-->
+            <!--                            <input type="text" placeholder="Last Name" id="inputLastName"-->
+            <!--                                   class="shadow form-control form-control-lg">-->
+            <!--                        </div>-->
+            <!--                        <div class="col-lg-12 mb-3">-->
+            <!--                            <input type="email" placeholder="email address" id="inputEmail"-->
+            <!--                                   class="shadow form-control form-control-lg">-->
+            <!--                        </div>-->
+            <!--                        <div class="col-lg-12 mb-3">-->
+            <!--                            <textarea name="message" placeholder="message" id="message" rows="4"-->
+            <!--                                      class="shadow form-control form-control-lg"></textarea>-->
+            <!--                        </div>-->
+            <!--                        <div class="text-center d-grid mt-1">-->
+            <!--                            <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">-->
+            <!--                                Send-->
+            <!--                                <i class="fas fa-paper-plane"></i>-->
+            <!--                            </button>-->
+            <!--                        </div>-->
+            <!--                    </form>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </div>
 </section>
